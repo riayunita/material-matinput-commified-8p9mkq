@@ -1,0 +1,49 @@
+@import './material-snacker.scss';
+@import './material-prism.scss';
+@import './material-prism-dark.scss';
+
+$green: mat-palette($mat-green, A400);
+$light-blue: mat-palette($mat-light-blue, A400);
+$red: mat-palette($mat-red);
+
+$green-color: map-get($mat-green, A400);
+$light-blue-color: map-get($mat-light-blue, A400);
+$red-color: map-get($mat-red, 500);
+
+.primary-color {
+  color: $green-color;
+}
+
+.accent-color {
+  color: $light-blue-color;
+}
+
+.warn-color {
+  color: $red-color;
+}
+
+$default-theme: mat-dark-theme($green, $light-blue);
+@include angular-material-theme($default-theme);
+
+html, body, my-app, .app-frame, .app-body {
+  overflow: hidden;
+  margin: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.app-panel {
+  overflow: auto;
+  padding: 10px;
+}
+
+sidepanel mat-nav-list.mat-nav-list {
+  background-color: #212121;
+  padding-top: 0;
+}
+
+.active.active div.mat-list-item-content,
+.mat-option.mat-selected.mat-primary,
+.mat-primary .mat-option.mat-selected {
+  color: $green-color;
+}

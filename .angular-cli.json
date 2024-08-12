@@ -1,0 +1,8 @@
+{
+  "apps": [{
+    "styles": ["app/theme/material-theme.scss"]
+  }],
+  "defaults": [{
+    "styleExt": "scss"
+  }]
+}
